@@ -1,0 +1,9 @@
+librosa
+numpy
+keras
+keras-self-attention
+scipy
+Flask
+flask-cors
+werkzeug
+firebase-admin

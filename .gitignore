@@ -1,0 +1,17 @@
+workers/audio/node_modules
+workers/video/node_modules
+workers/audio/.env
+workers/video/.env
+websocket/.env
+websocket/node_modules
+websocket/package-lock.json
+
+
+# ignore python venv
+fer-api/ferenv
+ser-api/serenv
+
+# ignore service account key
+fer-api/wanderer-ai.json
+ser-api/wanderer-ai.json
+ser-api/wandererai.json

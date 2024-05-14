@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>RedisInsight - The Best Redis GUI</title>
+	<meta name="description" content="RedisInsight provides an intuitive and efficient graphical interface for Redis, allowing you to interact with your databases and manage your data." />
+	<link rel="canonical" href="https://redis.io/insight/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="RedisInsight - The Best Redis GUI" />
+	<meta property="og:description" content="RedisInsight provides an intuitive and efficient graphical interface for Redis, allowing you to interact with your databases and manage your data." />
+	<meta property="og:url" content="https://redis.io/insight/" />
+	<meta property="og:site_name" content="Redis" />
+	<meta property="article:publisher" content="https://www.facebook.com/Redisinc" />
+	<meta property="article:modified_time" content="2024-04-08T19:34:49+00:00" />
+	<meta property="og:image" content="https://redis.io/wp-content/uploads/2024/04/Redis_Website_PreviewCard_920x612px.png" />
+	<meta property="og:image:width" content="920" />
+	<meta property="og:image:height" content="612" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Redisinc" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://redis.io/insight/","url":"https://redis.io/insight/","name":"RedisInsight - The Best Redis GUI","isPartOf":{"@id":"https://redis.io/#website"},"primaryImageOfPage":{"@id":"https://redis.io/insight/#primaryimage"},"image":{"@id":"https://redis.io/insight/#primaryimage"},"thumbnailUrl":"https://redis.io/wp-content/uploads/2023/01/redisinsight-introduces-new-diagnostic-features-and-support-for-search-capabilities-blog-image.png","datePublished":"2021-07-18T06:26:52+00:00","dateModified":"2024-04-08T19:34:49+00:00","description":"RedisInsight provides an intuitive and efficient graphical interface for Redis, allowing you to interact with your databases and manage your data.","breadcrumb":{"@id":"https://redis.io/insight/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://redis.io/insight/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://redis.io/insight/#primaryimage","url":"https://redis.io/wp-content/uploads/2023/01/redisinsight-introduces-new-diagnostic-features-and-support-for-search-capabilities-blog-image.png","contentUrl":"https://redis.io/wp-content/uploads/2023/01/redisinsight-introduces-new-diagnostic-features-and-support-for-search-capabilities-blog-image.png","width":772,"height":550},{"@type":"BreadcrumbList","@id":"https://redis.io/insight/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://redis.io/"},{"@type":"ListItem","position":2,"name":"RedisInsight"}]},{"@type":"WebSite","@id":"https://redis.io/#website","url":"https://redis.io/","name":"Redis","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://redis.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//redis.io' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://redis.io/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--gray: #6d7278;--wp--preset--color--dark-gray: #494c4d;--wp--preset--color--light-gray: #a2a8a8;--wp--preset--color--ui: #dfdfdf;--wp--preset--color--ui-light: #f8f8f8;--wp--preset--color--cloudy: #e6e5e5;--wp--preset--color--smoke: #a7a7a7;--wp--preset--color--chill: #e3ebed;--wp--preset--color--ice: #f7f9fc;--wp--preset--color--navy: #354253;--wp--preset--color--light-navy: #5a697d;--wp--preset--color--red: #CD5D57;--wp--preset--color--orange: #CF5815;--wp--preset--color--dark-orange: #E98125;--wp--preset--color--neon-blue: #1969FF;--wp--preset--color--neon-blue-light: #10BBFE;--wp--preset--color--neon-green: #79e5a6;--wp--preset--color--teal: #14708D;--wp--preset--color--teal-light: #1CA9AB;--wp--preset--color--sky: #54bcfd;--wp--preset--color--baby: #8aa1ee;--wp--preset--color--purple: #5961ff;--wp--preset--color--purple-dark: #282550;--wp--preset--color--violet: #3e41a0;--wp--preset--color--light-violet: #465282;--wp--preset--color--brown: #726a5c;--wp--preset--color--gold: #777436;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 18px;--wp--preset--font-size--huge: 36px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='prefetch' as='style' id='wp-pagenavi-css' href='https://redis.io/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='child-theme-style-css' href='https://redis.io/wp-content/themes/redislabs-glide/assets/dist/css/main.min.css?ver=1713796205' type='text/css' media='all' />
+<link rel='stylesheet' id='single-css' href='https://redis.io/wp-content/themes/wpx/assets/dist/css/critical/single.css?ver=1713796202' type='text/css' media='all' />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js?ver=3.6.5" id="jquery-js"></script>
+<link rel="https://api.w.org/" href="https://redis.io/wp-json/" /><link rel="alternate" type="application/json" href="https://redis.io/wp-json/wp/v2/pages/435" /><link rel="alternate" type="application/json+oembed" href="https://redis.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fredis.io%2Finsight%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://redis.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fredis.io%2Finsight%2F&#038;format=xml" />
+<!-- Stream WordPress user activity plugin v4.0.0 -->
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TKZ6J9R');</script>
+		<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-1fedf62d6f1beddfa04",applicationID:"650495667"};;/*! For license information please see nr-loader-rum-1.257.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>S,lF:()=>N,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>k});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,customTransaction:void 0,disabled:!1,distMethod:x.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:x.q4,denyList:void 0,harvestCount:0,timeKeeper:void 0},R={};function S(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!R[e])throw new Error("Runtime for ".concat(e," was never set"));return R[e]}function k(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");R[e]=(0,i.D)(t,D);const r=(0,n.ek)(e);r&&(r.runtime=R[e])}function N(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.257.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.257.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.257.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-OiQHqGyF6PVYPjCHd8YlPkY+foWAb5sHWiuQeDd1Zne2fqGqvw2rXLKPRixlHrzSCXnR5SX25SeH9Z2ZKpwhiQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.257.0.PROD"]=self["webpackChunk:NRBA-1.257.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,3108));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class I extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var T=i(3081);class O extends m{static featureName=T.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,T.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,I,O],loaderType:"lite"})})()})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/wpx/assets/images/favicons/apple-touch-icon.png?v=A0mpW2gQlj">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/wpx/assets/images/favicons/favicon-32x32.png?v=A0mpW2gQlj">
+<link rel="icon" type="image/png" sizes="192x192" href="/wp-content/themes/wpx/assets/images/favicons/android-chrome-192x192.png?v=A0mpW2gQlj">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/wpx/assets/images/favicons/favicon-16x16.png?v=A0mpW2gQlj">
+<link rel="manifest" href="/wp-content/themes/wpx/assets/images/favicons/site.webmanifest?v=A0mpW2gQlj">
+<link rel="mask-icon" href="/wp-content/themes/wpx/assets/images/favicons/safari-pinned-tab.svg?v=A0mpW2gQlj" color="#cd5d57">
+<link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/wpx/assets/images/favicons/favicon.ico?v=A0mpW2gQlj">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/wp-content/themes/wpx/assets/images/favicons/mstile-144x144.png?v=A0mpW2gQlj">
+<meta name="msapplication-config" content="/wp-content/themes/wpx/assets/images/favicons/browserconfig.xml?v=A0mpW2gQlj">
+<meta name="theme-color" content="#ffffff">
+
+
+        <style type="text/css">
+            .hero-media-text img { height: auto; }
+.nav-secondary-inner li:nth-child(3),.nav-secondary-inner li:nth-child(7){ display: none; }
+#mktoForm_3067 { display: flex; flex-wrap: wrap; }
+
+#mktoForm_3067 .mktoFormRow:nth-of-type(12) { width: 100%!important; }
+
+
+.image-modal .content-inner { background-color: transparent!important; }        </style>
+    
+<!-- TrustArc -->
+<script async="async" src="https://consent.trustarc.com/notice?domain=redis.com&c=teconsent&js=nj&noticeType=bb&text=true&gtm=1"></script>
+<script>var __dispatched__ = {}; var __i__ = self.postMessage && setInterval(function(){ if(self.PrivacyManagerAPI && __i__){ var apiObject = {PrivacyManagerAPI: {action:"getConsentDecision", timestamp: new Date().getTime(), self: self.location.host}}; self.top.postMessage(JSON.stringify(apiObject),"*"); __i__ = clearInterval(__i__); }},50); self.addEventListener("message", function(e, d){ try{ if(e.data && (d= JSON.parse(e.data)) && (d = d.PrivacyManagerAPI) && d.capabilities && d.action=="getConsentDecision"){ var newDecision = self.PrivacyManagerAPI.callApi("getGDPRConsentDecision", self.location.host).consentDecision; newDecision && newDecision.forEach(function(label){ if(!__dispatched__[label]){ self.dataLayer && self.dataLayer.push({"event":"GDPR Pref Allows "+label}); __dispatched__[label] = 1; } }); } } catch(xx){} });</script>
+
+    <!-- Mutiny ABM -->
+    <script>
+        (function(){var a=window.mutiny=window.mutiny||{};if(!window.mutiny.client){a.client={_queue:{}};var b=["identify","trackConversion"];var c=[].concat(b,["defaultOptOut","optOut","optIn"]);var d=function factory(c){return function(){for(var d=arguments.length,e=new Array(d),f=0;f<d;f++){e[f]=arguments[f]}a.client._queue[c]=a.client._queue[c]||[];if(b.includes(c)){return new Promise(function(b,d){a.client._queue[c].push({args:e,resolve:b,reject:d});setTimeout(d,500)})}else{a.client._queue[c].push({args:e})}}};c.forEach(function(b){a.client[b]=d(b)})}})();
+    </script>
+    <script> window.mutiny.client.defaultOptOut(); </script>
+    <script src="https://client-registry.mutinycdn.com/personalize/client/bfbc97d1462e0101.js"></script>
+<link rel='dns-prefetch' href='//client-registry.mutinycdn.com' ><link rel='preconnect' href='//client-registry.mutinycdn.com' crossorigin><link rel='dns-prefetch' href='//connect.facebook.net' ><link rel='preconnect' href='//connect.facebook.net' crossorigin><link rel='dns-prefetch' href='//www.googletagmanager.com' ><link rel='preconnect' href='//www.googletagmanager.com' crossorigin><link rel='dns-prefetch' href='//script.hotjar.com' ><link rel='preconnect' href='//script.hotjar.com' crossorigin><link rel='dns-prefetch' href='//js.drift.com' ><link rel='preconnect' href='//js.drift.com' crossorigin>            <script type="text/javascript">
+                if ('function' !== typeof getCookie) {
+                    function getCookie(name) {
+                        let value = `; ${ document.cookie }`;
+                        let parts = value.split(`; ${ name }=`);
+                        if (parts.length === 2) return parts.pop().split(';').shift();
+                    }
+                }
+            </script>
+        <link rel="alternate" hreflang="x-default" href="https://redis.io/insight/">
+                    <link rel="alternate" hreflang="en" href="https://redis.io/insight/">
+        		<style type="text/css" id="wp-custom-css">
+			html body .absolute {
+    position: absolute !important;
+    z-index: -1;
+}
+
+html body .bottom-0 {
+    bottom: 0;
+}
+html body .left-0 {
+    left: 0;
+}
+
+html body .margin-bottom-0 {
+    margin-bottom: 0 !important;
+}		</style>
+		    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/TTTrailers-Bd.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/TTTrailers-Bd.woff" as="font"
+        type="font/woff" crossorigin>
+    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/SpaceMono-Regular.woff" as="font"
+        type="font/woff" crossorigin>
+    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/SpaceMono-Regular.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/SpaceGrotesk-Regular.woff"
+        as="font" type="font/woff" crossorigin>
+    <link rel="preload"
+        href="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/fonts/SpaceGrotesk-Regular.woff2"
+        as="font" type="font/woff" crossorigin>
+    
+    <style type="text/css">
+    :root {
+        --white-paper: #ff2828;
+        --data-sheet: #5925e8;
+        --e-book: #e7ea25;
+        --blog: #dcff1e;
+        --case-study: #ff2828;
+        --partners: #5925e8;
+        --press: #c795e3;
+        --documents: #80dbff;
+        --page: #163341;
+        --eventwebinar: #dd9933;
+    }
+    </style>
+
+</head>
+
+<body style=""
+     class="page-template page-template-templates page-template-redis-insight page-template-templatesredis-insight-php page page-id-435 wp-embed-responsive page-template-glide-template  rcplan-nones slug-insight no-alert-bar">
+
+        <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKZ6J9R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- alert bar -->
+    
+            <header class="header-main">
+        <div class="header-main-outer">
+            <div class="header-main-wrap">
+                <a href="https://redis.io/" class="logo-primary">
+                                        <img class="logo-full" width="117px" height="40px"
+                        src="https://redis.io/wp-content/uploads/2024/04/Logotype.svg?auto=webp&quality=85,75&width=120"
+                        alt="White Redis Logo">
+                                    </a>
+
+                                <a id="mobile-sub-menu-back-btn" class="desktop-hidden" href="javascript:void(0);">Back</a>
+<nav class="nav-primary">
+    <!-- Primary navigation menu -->
+    <div class="menu-nav-primary-container">
+        <ul id="menu-nav-primary" class="menu">
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153729"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children  menu-item-153729  sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Products">Products</span>
+                </span>
+
+                <ul class="sub-menu">                    <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <div class="column-1">
+                        <!-- First column of megamenu -->
+                        <li id="menu-item-153730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153730 col-1 cust-hr">
+                                            <span>Products</span><ul class="sub-menu"><li id="menu-item-153731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153731 ">
+                                                    <a href="/docs/latest/get-started/">
+                                                        Source available<span class="subcontent">In-memory database for caching and streaming</span></a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153732 ">
+                                                    <a href="/cloud/">
+                                                        Redis Cloud<span class="subcontent">Fully managed service integrated with Google Cloud, Azure, and AWS for production-ready apps</span></a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153733 ">
+                                                    <a href="/enterprise/">
+                                                        Redis Software<span class="subcontent">Self-managed software with additional compliance, reliability, and resiliency for enterprise scaling</span></a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li><li id="menu-item-153734" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153734 col-1">
+                                            <span>Tools</span><ul class="sub-menu"><li id="menu-item-153735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153735  current-active">
+                                                    <a href="/insight/">
+                                                        Redis Insight</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153736 ">
+                                                    <a href="/clients/">
+                                                        Clients and connectors</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                        <div class="column-2">
+                        <!-- Second column of megamenu -->
+                        <li id="menu-item-153737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153737 col-2">
+                                            <span>Key features</span><ul class="sub-menu"><li id="menu-item-153738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153738 ">
+                                                    <a href="/search/">
+                                                        Search and query</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153739 ">
+                                                    <a href="/json/">
+                                                        JSON</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153740 ">
+                                                    <a href="/active-active/">
+                                                        Active-Active</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153741 ">
+                                                    <a href="/auto-tiering/">
+                                                        Auto-tiering</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153742 ">
+                                                    <a href="/solutions/vector-search/">
+                                                        Vector Search</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153743 ">
+                                                    <a href="/data-integration/">
+                                                        Data Integration</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                        <div class="column-3">
+                        <!-- Third column of megamenu -->
+                        <li id="menu-item-153744" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153744 col-3 cust-hr">
+                                            <span>See how it works</span><ul class="sub-menu"><li id="menu-item-153745" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153745 submenu-btn">
+                                                    <a href="/demo-center/">
+                                                        Visit Demo Center</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li><li id="menu-item-153746" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153746 col-3">
+                                            <span>Get Redis</span><ul class="sub-menu"><li id="menu-item-153747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153747 submenu-btn">
+                                                    <a href="/downloads/">
+                                                        Downloads</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                    </ul>            </li>
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153748"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children  menu-item-153748  sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Solutions">Solutions</span>
+                </span>
+
+                <ul class="sub-menu">                    <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <div class="column-1">
+                        <!-- First column of megamenu -->
+                        <li id="menu-item-153749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153749 col-1">
+                                            <span>Use cases</span><ul class="sub-menu"><li id="menu-item-153750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153750 ">
+                                                    <a href="/solutions/caching/">
+                                                        Caching</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153751 ">
+                                                    <a href="/solutions/deduplication/">
+                                                        Deduplication</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153752 ">
+                                                    <a href="/solutions/fast-data-ingest/">
+                                                        Fast data ingest</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153753 ">
+                                                    <a href="/solutions/feature-stores/">
+                                                        Feature stores</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153754 ">
+                                                    <a href="/solutions/session-management/">
+                                                        Session management</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153755 ">
+                                                    <a href="/solutions/vector-search/">
+                                                        Vector search</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                        <div class="column-2">
+                        <!-- Second column of megamenu -->
+                        <li id="menu-item-153756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153756 col-2">
+                                            <span>Industries</span><ul class="sub-menu"><li id="menu-item-153757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153757 ">
+                                                    <a href="/industries/financial-services/">
+                                                        Financial services</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153758 ">
+                                                    <a href="/industries/gaming/">
+                                                        Gaming</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153759 ">
+                                                    <a href="/industries/healthcare/">
+                                                        Healthcare</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153760 ">
+                                                    <a href="/industries/retail/">
+                                                        Retail</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                        <div class="column-3">
+                        <!-- Third column of megamenu -->
+                        <li id="menu-item-153761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153761 col-3 cust-hr">
+                                            <span>Customer case studies</span><ul class="sub-menu"><li id="menu-item-153762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153762 submenu-btn">
+                                                    <a href="/customers/">
+                                                        Read stories</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li><li id="menu-item-153763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153763 col-3">
+                                            <span><img src="/wp-content/uploads/2023/10/niantic-logo-hero.svg" alt="menu-logo" height="64"></span><span class="subcontent">Optimizing Pokémon GO with a Redis Enterprise cluster</span><ul class="sub-menu"><li id="menu-item-153764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153764 submenu-btn-bdr">
+                                                    <a href="/customers/niantic/">
+                                                        See more</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                    </ul>            </li>
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153765"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children  menu-item-153765 item-center-menu sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Support">Support</span>
+                </span>
+
+                <ul class="sub-menu">                    <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <div class="column-1">
+                        <!-- First column of megamenu -->
+                        <li id="menu-item-153766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153766 col-1">
+                                            <span>Expert services</span><ul class="sub-menu"><li id="menu-item-153767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153767 ">
+                                                    <a href="/contact/">
+                                                        Contact us</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153768 ">
+                                                    <a href="/services/professional-services/">
+                                                        Professional services</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153769 ">
+                                                    <a href="/support/">
+                                                        Support</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                    </ul>            </li>
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153770"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children  menu-item-153770 item-center-menu sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Company">Company</span>
+                </span>
+
+                <ul class="sub-menu">                    <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <div class="column-1">
+                        <!-- First column of megamenu -->
+                        <li id="menu-item-153771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153771 col-1">
+                                            <span>About</span><ul class="sub-menu"><li id="menu-item-153772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153772 ">
+                                                    <a href="/company/">
+                                                        Mission & values</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153773 ">
+                                                    <a href="/company/team/">
+                                                        Leadership</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153774 ">
+                                                    <a href="/careers/">
+                                                        Careers</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153775 ">
+                                                    <a href="/company/news/">
+                                                        News</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153776 ">
+                                                    <a href="/partners/">
+                                                        Partners</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                    </ul>            </li>
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153777"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-has-children  menu-item-153777 center-submenu sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Docs">Docs</span>
+                </span>
+
+                <ul class="sub-menu">                    <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <!-- First column of megamenu -->
+                                        <!-- Second column of megamenu -->
+                                        <!-- Third column of megamenu -->
+                                        <div class="column-1">
+                        <!-- First column of megamenu -->
+                        <li id="menu-item-153778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153778 col-1">
+                                            <span>Learn</span><ul class="sub-menu"><li id="menu-item-153779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153779 ">
+                                                    <a href="/docs/">
+                                                        Docs</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-154038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-154038 ">
+                                                    <a href="/commands/">
+                                                        Commands</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153780 ">
+                                                    <a href="/docs/get-started/">
+                                                        Quick starts</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153781 ">
+                                                    <a href="/learn/">
+                                                        Tutorials</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153784 ">
+                                                    <a href="/university/">
+                                                        University</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-154319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-154319 ">
+                                                    <a href="/kb/">
+                                                        Knowledge base</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-154322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-154322 ">
+                                                    <a href="/resources/">
+                                                        Resources</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153783 ">
+                                                    <a href="/blog/">
+                                                        Blog</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                        <div class="column-2">
+                        <!-- Second column of megamenu -->
+                        <li id="menu-item-153785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153785 col-2 cust-hr">
+                                            <span>Connect</span><ul class="sub-menu"><li id="menu-item-153786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153786 ">
+                                                    <a href="/community/">
+                                                        Community</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li><li id="menu-item-153787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153787 ">
+                                                    <a href="/events/">
+                                                        Events, tech talks & webinars</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li><li id="menu-item-153788" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153788 col-2">
+                                            <span>Vector search</span><span class="subcontent">Learn what you need to go from beginner to GenAI expert</span><ul class="sub-menu"><li id="menu-item-153789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153789 submenu-btn">
+                                                    <a href="/learn/vector/">
+                                                        Get started</a>
+                                                    <ul class="sub-menu"></ul>
+                                                            </li></ul>
+                                            </li>                    </div>
+                                    </ul>            </li>
+                        <!-- Top-level menu item -->
+            <li id="menu-item-153790"
+                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-153790  sub-menu-toggler ">
+
+                <span class="inner">
+                    <!-- Menu item title -->
+                    <span
+                        title="Pricing"><a
+                            href="/pricing/">Pricing</a></span>
+                </span>
+
+                            </li>
+                    </ul>
+        <!-- Mobile buttons -->
+        <div class="mobile-buttons">
+            <!-- wp:columns {"verticalAlignment":"center","className":"margin-bottom-0"} -->
+<div class="wp-block-columns are-vertically-aligned-center margin-bottom-0"><!-- wp:column {"verticalAlignment":"center","width":"140px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:140px"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white","className":"menu-primary-btn"} -->
+<div class="wp-block-button menu-primary-btn"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="/try-free/">Try Redis</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"130px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:130px"><!-- wp:rediscustom/linkwrapper {"id":"nav-contact","url":"/meeting/"} -->
+<a href="/meeting/" id="nav-contact" class="wp-block-rediscustom-linkwrapper redislink-wrapper undefined" target="" rel="noopener"><!-- wp:paragraph {"className":"menu-secondary-btn"} -->
+<p class="menu-secondary-btn">Book a meeting</p>
+<!-- /wp:paragraph --></a>
+<!-- /wp:rediscustom/linkwrapper --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"80px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:80px"><!-- wp:paragraph {"className":"menu-txt-cta "} -->
+<p class="menu-txt-cta"><a href="https://app.redislabs.com/" target="_blank" rel="noreferrer noopener">Login</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-sub-menu" style="display:none;">
+        <div class="mobile-sub-menu-content"></div>
+    </div>
+</nav>                
+                                <nav class="nav-utility" data-header="nav-utility">
+    <a href="javascript:void(0);" class="header-search" style="padding-right: 1.25rem;" href="#">
+        <img alt="search" width="21px" height="21px"
+            src="/wp-content/themes/redislabs-glide/assets/src/images/search-icon.svg">
+    </a>
+    <!-- wp:columns {"verticalAlignment":"center","className":"margin-bottom-0"} -->
+<div class="wp-block-columns are-vertically-aligned-center margin-bottom-0"><!-- wp:column {"verticalAlignment":"center","width":"80px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:80px"><!-- wp:paragraph {"className":"margin-top-0 margin-bottom-0"} -->
+<p class="margin-top-0 margin-bottom-0"><a href="https://app.redislabs.com/" target="_blank" rel="noreferrer noopener">Login</a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"130px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:130px"><!-- wp:rediscustom/linkwrapper {"id":"nav-contact","url":"/meeting/"} -->
+<a href="/meeting/" id="nav-contact" class="wp-block-rediscustom-linkwrapper redislink-wrapper undefined" target="" rel="noopener"><!-- wp:paragraph {"className":"margin-top-0 margin-bottom-0"} -->
+<p class="margin-top-0 margin-bottom-0">Book a meeting</p>
+<!-- /wp:paragraph --></a>
+<!-- /wp:rediscustom/linkwrapper --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","width":"140px"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:140px"><!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="/try-free/">Try Redis</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->    <a href="#" class="toggle-tablet-menu" data-header="toggle-tablet-menu">
+        <div class="responsive-menu hide"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div class="nav-mobile-close">
+        <div class="nav-mobile-close-inner">
+            <a class="close-nav-mobile" data-mobile="close-nav-mobile">
+                <img alt="close" src="/wp-content/themes/redislabs-glide/assets/dist/images/close-icon.svg">
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="search-model-main">
+    <div class="search-model-inner">
+        <div class="search-model-close-btn"><img decoding="async"
+                src="/wp-content/uploads/2023/11/UI-Flexible.svg?auto=webp&quality=85,75&width=80" alt=""
+                style="object-fit:cover;width:20px;height:20px" loading="lazy"></div>
+        <div class="search-model-wrap" data-header="search-wrap">
+            <div class="pop-up-content-wrap">
+                <div class="header-search-title">Search</div>
+                <form id="searchForm" action="https://redis.io" method="get">
+                    <div class="searchbox">
+                        <label for="searchInput">Search:</label>
+                        <input type="text" name="s"
+                            placeholder="Search"
+                            id="search-field" data-header="search-field">
+                        <button type="submit"><img
+                                src="/wp-content/themes/redislabs-glide/assets/src/images/search-icon.svg"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>                            </div>
+        </div>
+    </header>
+    
+    
+    <div class="bounds">
+                        <div class="bounds-inner">
+            <div class="wp-block-group alignfull banner space-108 inner-banner bglight is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<h1 class="wp-block-heading has-text-align-center">Get the best in GUI</h1>
+
+
+
+<p class="has-text-align-center heading-3 has-normal-font-size">Redis Insight is a powerful desktop user interface that helps you visualize and optimize your data for Redis and Redis Stack. Plus it supports CLI interaction in a fully featured desktop UI client.</p>
+
+
+
+<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-layout-1 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button wp-shuffle"><a class="wp-block-button__link has-text-align-center wp-element-button" href="/insight/#insight-form">Download Redis Insight</a></div>
+</div>
+</div></div>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull bgmidnight padd-x-43 space-108 is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container"><div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/redisinsight-dashboard-illustration-2.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" alt="Redis | RedisInsight Dashboard Screenshot" class="wp-image-114364" loading="eager"></figure></div></div></div>
+
+
+
+<div class="wp-block-group bgmidnight alignfull seperator-line is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:#5c707a;color:#5c707a">
+</div></div>
+
+
+
+<div class="wp-block-group alignfull bgmidnight padd-x-43 space-108 padding-bottom-0 is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-heading has-text-align-center">Build from anywhere</h2>
+
+
+
+<p class="has-text-align-center max-w-1000">Redis Insight is supported on multiple operating systems: Linux, Windows, and macOS. It seamlessly supports all our deployments, whether you use Redis Open Source, <a href="https://redis.io/">Redis Stack</a>, <a href="/enterprise/">Redis Enterprise Software</a>, <a href="/cloud/">Redis Cloud</a>, <a href="/cloud/compare-us-with-aws-elasticache/">Amazon ElastiCache</a>, or <a href="https://azure.microsoft.com/en-us/products/cache/" target="_blank" rel="noopener">Azure Cache for Redis</a>.</p>
+</div></div>
+
+
+
+    <section id="faq-block_c43bf94046c94b33ad68c9f8de6027ea" class=" wp-block-group alignfull bgmidnight space-108">
+        <div class="wrapper">
+            <div class="wp-block-accordion accordion-with-image">
+                <div class="bgmidnight">
+                                        <div class="accordion-listing">
+                        <div class="accordion-container">
+                            
+                            <div class="accordion-row cl-yellow">
+                                <h3 class="accordion-title active">
+                                    <span class="item-vector-icon"> &gt; </span> Enjoy the view                                    <i class="icon-plus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/plus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="plus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                    <i class="icon-minus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/minus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="minus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                </h3>
+                                <div class="accordion-content show">
+                                    <div class="acc-con-space">
+                                                                                <div class="info-content">
+                                            <p>The Redis Insight graphic UI helps you browse and interact with your data.</p>
+<ul>
+<li>Filter and visualize Redis keys, perform CRUD operations, or delete keys in bulk.</li>
+<li>Use friendly keyboard navigation and display data in pretty-print JSON, hexadecimal, MessagePack, and many other formats.</li>
+<li>Use the Tree view to group data and enhance the navigation.</li>
+</ul>
+                                        </div>
+                                                                                                                        <div class="accordion-col-row">
+                                                                                        <div class="accordion-img  ">
+                                                <img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/image-visualize.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" class="attachment-full size-full" alt="Redis | RedisInsight Dashboard Screenshot" loading="lazy">                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-row cl-violet">
+                                <h3 class="accordion-title ">
+                                    <span class="item-vector-icon"> / </span> Use intuitive CLI                                    <i class="icon-plus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/plus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="plus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                    <i class="icon-minus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/minus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="minus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                </h3>
+                                <div class="accordion-content ">
+                                    <div class="acc-con-space">
+                                                                                <div class="info-content">
+                                            <p>Workbench, our advanced CLI, lets you run Redis commands with the built-in Monaco Editor. It has syntax highlighting, developer shortcuts, and auto-completion.</p>
+                                        </div>
+                                                                                                                        <div class="accordion-col-row">
+                                                                                        <div class="accordion-img  ">
+                                                <img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/image-intuitive-cli.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" class="attachment-full size-full" alt="Redis | RedisInsight Dashboard Screenshot" loading="lazy">                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-row cl-light-blue">
+                                <h3 class="accordion-title ">
+                                    <span class="item-vector-icon"> [ </span> Work seamlessly with Redis’ best                                    <i class="icon-plus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/plus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="plus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                    <i class="icon-minus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/minus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="minus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                </h3>
+                                <div class="accordion-content ">
+                                    <div class="acc-con-space">
+                                                                                <div class="info-content">
+                                            <p>Redis Insight makes it easy to query and interactively work with our latest capabilities. Whether you’re using <a href="/resources/stack/">Redis Stack</a>, <a href="/enterprise/">Redis Enterprise</a>, or <a href="/redis-enterprise-cloud/overview/">Redis Cloud</a>, Redis Insight lets you manipulate complex data models like documents, graphs, and time series. Explore queryable JSON documents, full-text search, and probabilistic data structures.</p>
+                                        </div>
+                                                                                                                        <div class="accordion-col-row">
+                                                                                        <div class="accordion-img  ">
+                                                <img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/image-support-redis-stack.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" class="attachment-full size-full" alt="Redis | RedisInsight Dashboard Screenshot" loading="lazy">                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-row cl-yellow">
+                                <h3 class="accordion-title ">
+                                    <span class="item-vector-icon"> } </span> Manage streams &amp; consumer groups                                    <i class="icon-plus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/plus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="plus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                    <i class="icon-minus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/minus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="minus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                </h3>
+                                <div class="accordion-content ">
+                                    <div class="acc-con-space">
+                                                                                <div class="info-content">
+                                            <p>Visualize <a href="/resources/ui/insight/tutorials/insight-stream-consumer/">Redis Streams and consumer groups</a> and set an automatic refresh to display new entries in real-time. Use a dedicated workspace for <a href="/resources/manual/pubsub/">Redis Pub/Sub</a> to publish and consume messages.</p>
+                                        </div>
+                                                                                                                        <div class="accordion-col-row">
+                                                                                        <div class="accordion-img  ">
+                                                <img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/image-manage-streams-1.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" class="attachment-full size-full" alt="Redis RedisInsight | Manage streams and consumer groups" loading="lazy">                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-row cl-violet">
+                                <h3 class="accordion-title ">
+                                    <span class="item-vector-icon"> ! </span> Analyze commands in real time                                    <i class="icon-plus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/plus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="plus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                    <i class="icon-minus accordion-control">
+                                        <img decoding="async" src="/wp-content/themes/redislabs-glide/assets/dist/images/minus-white.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=12" alt="minus-white" width="12" height="12" loading="lazy">
+                                    </i>
+                                </h3>
+                                <div class="accordion-content ">
+                                    <div class="acc-con-space">
+                                                                                <div class="info-content">
+                                            <p>Troubleshoot performance issues, trace and debug your Redis server by seeing commands processed in real-time and inspecting slow commands.</p>
+                                        </div>
+                                                                                                                        <div class="accordion-col-row">
+                                                                                        <div class="accordion-img  ">
+                                                <img decoding="async" src="https://redis.io/wp-content/uploads/2022/11/image-log-analysis.svg?format=pjpg&amp;auto=webp&amp;quality=1&amp;width=500" class="attachment-full size-full" alt="Redis | RedisInsight Dashboard Screenshot" loading="lazy">                                            </div>
+                                                                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                        <div class="accordion-right">
+                            <div class="accordion-col-row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+<div class="wp-block-group space-108 is-layout-constrained wp-block-group-is-layout-constrained"><div class="wp-block-group__inner-container">
+<p class="has-text-align-center max-w-1000">Check out the <a href="https://github.com/RedisInsight/RedisInsight" target="_blank" rel="noopener"><u>GitHub project</u></a> and <a href="https://github.com/RedisInsight/RedisInsight/issues/new/choose" target="_blank" rel="noopener"><u>let us know</u></a> what you think.</p>
+
+
+
+<div class="wp-block-buttons is-horizontal is-content-justification-center is-nowrap is-layout-flex wp-container-core-buttons-layout-2 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button wp-shuffle is-style-fill"><a class="wp-block-button__link has-text-align-center wp-element-button" href="https://youtu.be/3MXOvoX7Sdw" target="_blank" rel="noopener">Watch a quick intro</a></div>
+</div>
+</div></div>
+<div id="insight-form" class="wp-block-group alignwide alignfull bgmidnight questions-get-answers-block">
+    <div class="wp-block-group__inner-container">
+        <div class=" wp-block-form wp-block single-mail-form "
+            >
+            <div class="form-content">
+                <h2 class="form-title text-align-center">Download Redis Insight</h2>
+                                                                
+                                <!-- mkto optin scripts -->
+                <script
+                    src="https://redis.io/wp-content/themes/wpx/assets/dist/js/jquery-for-marketo-opt-in.min.js">
+                </script>
+                <script src="https://redis.io/wp-content/themes/wpx/assets/dist/js/marketo-opt-in.min.js"></script>
+                <script src="https://redis.io/wp-content/themes/wpx/assets/dist/js/marketo-opt-in-4.min.js">
+                </script>
+
+                <form id="mktoForm_3067"></form>
+                <script>
+                jQuery(document).ready(function($) {
+                    ToggleFormFields.init();
+                    MktoForms2.loadForm("//lp.redis.com", "915-NFD-128", 3067,
+                        function(form) {
+                            ToggleFormFields.hideFields(form);
+                            // Form Pre-fill
+                            var cValue = getCookie("_mkto_trk");
+                            jQuery.get(
+                                'https://redis.io/wp-content/themes/wpx/partials/forms/mkto_lead.php?mkto_trk=' +
+                                encodeURIComponent(cValue)).done(function(data) {
+                                var mktoLead = data;
+                                var prefillFields = {
+                                    "Email": mktoLead.email,
+                                    "FirstName": mktoLead.firstName,
+                                    "LastName": mktoLead.lastName,
+                                    "Phone": mktoLead.phone,
+                                    "Country": mktoLead.country,
+                                    "Industry": mktoLead.industry,
+                                    "State": mktoLead.state,
+                                    "Job_Function_Mktg__c": mktoLead.Job_Function_Mktg__c,
+                                    "companyNameMKTO": mktoLead.companyNameMKTO
+                                };
+                                form.vals(prefillFields);
+                                ToggleFormFields.toggleNotYouLink(form);
+                                setTimeout(function() {
+                                    ToggleFormFields.hideStateField(form);
+                                }, 1500);
+                            });
+                        });
+                    MktoForms2.whenReady(function(form) {
+                        form.onSuccess(function(values, followUpUrl) {
+                            let downloadType = '';
+
+                            if ('RedisInsight Preview' === values.redisInsightType) {
+                                switch (values.redisInsightOperatingPlatform) {
+                                    case 'Mac OS':
+                                        window.open(
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-mac-x64.dmg',
+                                            '_blank');
+                                        downloadType =
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-mac-x64.dmg';
+                                        break;
+                                    case 'Mac OS M1':
+                                        window.open(
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-mac-arm64.dmg',
+                                            '_blank');
+                                        downloadType =
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-mac-arm64.dmg';
+                                        break;
+                                    case 'Windows':
+                                        window.open(
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-win-installer.exe',
+                                            '_blank');
+                                        downloadType =
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-win-installer.exe';
+                                        break;
+                                    case 'Linux AppImage':
+                                        window.open(
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-linux-x86_64.AppImage',
+                                            '_blank');
+                                        downloadType =
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-linux-x86_64.AppImage';
+                                        break;
+                                    case 'Linux Debian':
+                                        window.open(
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-linux-amd64.deb',
+                                            '_blank');
+                                        downloadType =
+                                            'https://download.redisinsight.redis.com/latest/RedisInsight-linux-amd64.deb';
+                                        break;
+                                    default:
+                                }
+                            } else {
+                                switch (values.redisInsightOperatingPlatform) {
+                                    case 'Mac OS':
+                                        window.open(
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-mac.dmg',
+                                            '_blank');
+                                        downloadType =
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-mac.dmg';
+                                        break;
+                                    case 'Windows':
+                                        window.open(
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-win.msi',
+                                            '_blank');
+                                        downloadType =
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-win.msi';
+                                        break;
+                                    case 'Linux':
+                                        window.open(
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-linux64',
+                                            '_blank');
+                                        downloadType =
+                                            'https://downloads.redisinsight.redislabs.com/latest/redisinsight-linux64';
+                                        break;
+                                    default:
+                                }
+                            }
+
+                            window.localStorage.setItem('dlri', btoa(downloadType));
+
+                            // Redirect to thank you page.
+                            setTimeout(() => {
+                                const data = new window.FormData();
+                                data.append('action', 'get_redirect_url');
+                                data.append('nonce', redisNonce);
+                                data.append('postid', redisPostid);
+
+                                window.fetch(redisAjaxURL, {
+                                    method: 'POST',
+                                    credentials: 'same-origin',
+                                    body: data,
+                                }).then((response) => response.json()).then((
+                                    response) => {
+                                    const form_redirect_url =
+                                        decodeURIComponent(
+                                            response.data);
+
+                                    if (form_redirect_url) {
+                                        window.location.href = form_redirect_url
+                                            .indexOf('http') == 0 ?
+                                            form_redirect_url :
+                                            `${ window.location.protocol }//${ window.location.host }${ form_redirect_url }`;
+                                    } else {
+                                        form.getFormElem().hide();
+
+                                        $('.hide-on-submit').hide();
+                                        $('.show-on-submit').show();
+
+                                        $(form.getFormElem()).closest(
+                                            '.wp-block-form').find(
+                                            '.form-response.inline').show();
+                                    }
+                                });
+                            }, 500);
+                            return false;
+                        });
+                    });
+                });
+
+                const ToggleFormFields = new Object();
+
+                ToggleFormFields.init = function() {
+
+                    document.addEventListener("input", function(event) {
+
+                        let element = event.target;
+
+                        if (element.tagName == 'INPUT' && element.classList.contains("mktoEmailField")) {
+
+                            let email_valid = /\S+@\S+\.\S+/.test(element.value);
+
+                            if (email_valid) {
+
+                                let form_elem = element.closest('form.mktoForm');
+
+                                ToggleFormFields.toggleFields(form_elem);
+
+                            }
+
+                        }
+
+                    }, {
+                        once: false
+                    });
+
+                    document.addEventListener("click", function(event) {
+
+                        let element = event.target;
+
+                        if (element.tagName == 'A' && element.classList.contains("not-you-link")) {
+
+                            event.preventDefault();
+
+                            ToggleFormFields.notYouLinkAction();
+
+                        }
+
+                    });
+
+                    ToggleFormFields.formEnrichment();
+
+                }
+
+                ToggleFormFields.formEnrichment = function() {
+
+                    document.addEventListener("clearbit-forms-marketo-enrichment-complete", function(event) {
+
+                        // form variable refers to the MktoForms2 instance
+                        const {
+                            form
+                        } = event.detail;
+
+                        let values = form.getValues();
+                        let form_elem = form.getFormElem()[0];
+                        let company_field = form_elem.querySelectorAll('input#companyNameMKTO')[0];
+                        company_field.value = values.Company;
+
+                        ToggleFormFields.toggleFields(form);
+
+                    });
+
+                }
+
+                ToggleFormFields.hideStateField = function(form) {
+
+                    let form_elem = form.getFormElem()[0];
+                    let state_field = form_elem.querySelector('select#State');
+
+                    if (state_field && state_field.value != '') {
+
+                        state_field.closest('.mktoFormRow').style.display = 'none';
+
+                    }
+
+                }
+
+                ToggleFormFields.hideFields = function(form) {
+
+                    let form_elem = form.getFormElem()[0]; // jQuery form element object
+                    let form_fields = form_elem.querySelectorAll(
+                        '.mktoField:not([type="hidden"])'); // form fields to manipulate
+                    let field_row;
+
+                    form_fields.forEach((el, index) => {
+
+                        field_row = el.closest('.mktoFormRow');
+
+                        if (
+                            'email' !== el.getAttribute('type') &&
+                            'redisInsightOperatingPlatform' !== el.getAttribute('name') &&
+                            'redisInsightType' !== el.getAttribute('name')
+                        ) {
+
+                            field_row.style.display = 'none';
+
+                        }
+
+                    });
+
+                    ToggleFormFields.toggleNotYouLink(form);
+
+                }
+
+                ToggleFormFields.toggleFields = function(form) {
+
+                    let form_elem = typeof form.getFormElem === 'undefined' ? form : form.getFormElem()[
+                        0]; // jQuery form element object
+                    let form_fields = form_elem.querySelectorAll(
+                        '.mktoField:not([type="hidden"])'); // form fields to manipulate
+                    let field_val, field_row;
+
+                    form_elem.style.display = 'none'; // prevent field flashing
+
+                    form_fields.forEach((el) => {
+                        field_val = el.value.trim();
+                        field_row = el.closest('.mktoFormRow');
+
+                        if ('undefined' === field_val) {
+                            field_val = false;
+                            el.value = '';
+                        }
+
+                        if (
+                            field_val &&
+                            'email' !== el.getAttribute('type') &&
+                            'redisInsightOperatingPlatform' !== el.getAttribute('name') &&
+                            'redisInsightType' !== el.getAttribute('name')
+                        ) {
+                            field_row.style.display = 'none'; // Hide field if already populated.
+                        } else {
+                            field_row.style.display = 'block'; // Show field if not populated.
+                        }
+                    });
+
+                    ToggleFormFields.toggleNotYouLink(form);
+
+                    form_elem.style.display = 'block'; // prevent field flashing
+
+                }
+
+                ToggleFormFields.notYouLinkAction = function() {
+
+                    // Cookie.remove('_mkto_trk');
+                    document.cookie = "_mkto_trk=;domain=.redis.com;path=/;expires=" + new Date(0).toGMTString();
+                    document.cookie = "_mkto_trk=;domain=.com.test;path=/;expires=" + new Date(0).toGMTString();
+                    document.cookie = "_mkto_trk=;domain=.mkt-5300-redis.pantheonsite.io;path=/;expires=" +
+                        new Date(0)
+                        .toGMTString();
+
+                    window.localStorage.removeItem('_mkto_form_fill');
+
+                    window.location.reload();
+
+                }
+
+                ToggleFormFields.toggleNotYouLink = function(form) {
+
+                    let form_elem = typeof form.getFormElem === 'undefined' ? form : form.getFormElem()[
+                        0]; // jQuery form element object
+                    let email_elem = form_elem.querySelector('input.mktoEmailField');
+                    let email_not_you = form_elem.querySelector('.not-you-link');
+
+                    if (email_not_you && Cookie.get('_mkto_trk') && email_elem.value.trim()) {
+
+                        email_not_you.style.display = 'inline-block';
+
+                    }
+
+                }
+
+                const Cookie = new Object();
+
+                Cookie.set = function(name, value, days = false, path = '/') {
+
+                    var expires;
+
+                    if (days) {
+
+                        var date = new Date();
+
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = '; expires=' + date.toUTCString();
+
+                    } else { // session only cookie
+
+                        expires = '';
+
+                    }
+
+                    document.cookie = name + '=' + value + expires + '; path=' + path;
+
+                };
+
+                Cookie.get = function(name = false) {
+
+                    if (document.cookie.length > 0) {
+
+                        if (name) {
+
+                            var c_start, c_end;
+                            c_start = document.cookie.indexOf(name + '=');
+
+                            if (c_start != -1) {
+
+                                c_start = c_start + name.length + 1;
+                                var c_end = document.cookie.indexOf(';', c_start);
+
+                                if (c_end == -1) {
+
+                                    c_end = document.cookie.length;
+
+                                }
+
+                                return unescape(document.cookie.substring(c_start, c_end));
+
+                            }
+
+                        } else { // get all cookies
+
+                            var pairs = document.cookie.split(";");
+                            var cookies = {};
+
+                            for (var i = 0; i < pairs.length; i++) {
+
+                                var pair = pairs[i].split("=");
+                                cookies[(pair[0] + '').trim()] = unescape(pair.slice(1).join('='));
+
+                            }
+
+                            return cookies;
+
+                        }
+
+                    }
+
+                    return null;
+
+                };
+
+                Cookie.remove = function(name, path = '/') {
+
+                    this.set(name, '', -1, path);
+
+                };
+                </script>
+                <div class="form-response inline">
+                    <div id="thank-msg" class="text-align-center">
+                        <h4>Thank you for downloading RedisInsight.</h4>
+                        <p class="text-align-center">Get started by reviewing our <a
+                                href="https://docs.redis.com/latest/ri/" target="_blank">documentation</a></p>
+                        <h5>Continue Your Journey to Rediscover Redis</h5>
+                        <div class="flex-grid-ty">
+                            <div class="col-ty"><a target="_blank" href="https://redis.com/redis-enterprise-cloud/"><img
+                                        width="80" alt=""
+                                        src="https://redis.com/wp-content/uploads/2020/07/thankyou-cloud-2.png"><br>
+                                    Start Free in the Cloud</a></div>
+                            <div class="col-ty"><a target="_blank" href="https://forum.redis.com/"><img width="80"
+                                        alt=""
+                                        src="https://redis.com/wp-content/uploads/2020/07/thankyou-conversation-2.png"><br>
+                                    Join the Conversation</a></div>
+                            <div class="col-ty"><a target="_blank" href="https://redis.com/rediscover/projects/"><img
+                                        width="80" alt=""
+                                        src="https://redis.com/wp-content/uploads/2020/07/thankyou-project-2.png"><br>
+                                    Rediscover Redis</a></div>
+                        </div>
+                    </div>
+                </div>
+                                                            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div id="consent_blackbar"></div>
+<div class="footer-main">
+    <div class="footer-main-wrap">
+        <div class="footer-row">
+            
+<footer>
+    <div class="wrapper">
+        <div class="footer-columns">
+            <div class="col-one">
+                <div class="footer-logo">
+                    <a href="/">
+                        <img alt="redis logo" loading="lazy" width="118px" height="41px" class="footer-logo-img"
+                            src="https://redis.io/wp-content/uploads/2024/04/footlogo.svg">
+                    </a>
+                </div>
+                <ul class="footer-copyright hidem">
+                                                            <li id="menu-item-153805"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153805">
+                        <a
+                            href="https://trust.redis.io">Trust</a>
+                    </li>
+                                        <li id="menu-item-153806"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153806">
+                        <a
+                            href="/legal/redis-website-terms-of-use/">Terms of use</a>
+                    </li>
+                                        <li id="menu-item-153807"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153807">
+                        <a
+                            href="/legal/privacy-policy/">Privacy policy</a>
+                    </li>
+                                                        </ul>
+            </div>
+            <div class="col-two sitelinks">
+                <ul>
+                                                            <li id="menu-item-4949"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4949">
+                        <a
+                            href="/cloud/">Cloud</a>
+                    </li>
+                                        <li id="menu-item-153808"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153808">
+                        <a
+                            href="/enterprise/">Software</a>
+                    </li>
+                                        <li id="menu-item-153809"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153809">
+                        <a
+                            href="/pricing/">Pricing</a>
+                    </li>
+                                        <li id="menu-item-153810"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153810">
+                        <a
+                            href="/support/">Support</a>
+                    </li>
+                                                        </ul>
+                <ul>
+                                                            <li id="menu-item-98621"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98621">
+                        <a
+                            href="https://redis.io/company/">About us</a>
+                    </li>
+                                        <li id="menu-item-98620"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98620">
+                        <a
+                            href="https://redis.io/careers/">Careers</a>
+                    </li>
+                                        <li id="menu-item-98616"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98616">
+                        <a
+                            href="https://redis.io/contact/">Contact us</a>
+                    </li>
+                                        <li id="menu-item-98622"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-98622">
+                        <a
+                            href="https://redis.io/legal/">Legal notices</a>
+                    </li>
+                                                        </ul>
+                <div class="language-selector languageop showm">
+                    <label for="language-selector-mobile" class="hide">Select Language:</label>
+                    <select id="language-selector-mobile" class="language-select">
+                        <option disabled selected>Language</option>
+                        <option value="">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-three">
+                <div class=" sociallinks">
+                                        <a href="https://www.facebook.com/Redisinc" target="_blank" rel="noopener">
+                        <img src="/wp-content/themes/redislabs-glide/assets/dist/images/facebook.svg" width="11"
+                            height="20" alt="facebook-icon">
+                    </a>
+                                                            <a href="https://www.youtube.com/c/redisinc" target="_blank" rel="noopener" class="yt-icon">
+                        <img src="/wp-content/themes/redislabs-glide/assets/dist/images/Vector.svg" width="20"
+                            height="16" alt="Vector-icon">
+                    </a>
+                                                            <a href="https://www.linkedin.com/company/redisinc/" target="_blank" rel="noopener">
+                        <img src="/wp-content/themes/redislabs-glide/assets/dist/images/LinkedIn.svg" width="20"
+                            height="21" alt="LinkedIn-icon">
+                    </a>
+                                                            <a href=" https://www.instagram.com/redisinc/" target="_blank" rel="noopener">
+                        <img src="/wp-content/themes/redislabs-glide/assets/dist/images/Instagram.svg" width="19"
+                            height="20" alt="Instagram-icon">
+                    </a>
+                                                            <a href="https://twitter.com/Redisinc" target="_blank" rel="noopener">
+                        <img src="/wp-content/themes/redislabs-glide/assets/dist/images/X.svg" width="19" height="20"
+                            alt="X-icon">
+                    </a>
+                                                        </div>
+                <div class="language-selector languageop hidem">
+                    <label for="language-selector" class="hide">Select Language:</label>
+                    <select id="language-selector" class="language-select">
+                        <option disabled selected>Language</option>
+                        <option value="">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+            </div>
+            <div class="showm">
+                <ul class="footer-copyright">
+                                                            <li id="menu-item-153805"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153805">
+                        <a
+                            href="https://trust.redis.io">Trust</a>
+                    </li>
+                                        <li id="menu-item-153806"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153806">
+                        <a
+                            href="/legal/redis-website-terms-of-use/">Terms of use</a>
+                    </li>
+                                        <li id="menu-item-153807"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153807">
+                        <a
+                            href="/legal/privacy-policy/">Privacy policy</a>
+                    </li>
+                                                        </ul>
+            </div>
+        </div>
+    </div>
+</footer>        </div>
+    </div>
+</div>
+
+<button id="drift-btn"><img loading="eager" alt="Open the Drift message bot" width="60" height="60" src="/wp-content/themes/wpx/assets/images/icons/redis-chat.svg?noprocess"></button>
+
+<script>
+var SITE_ROOT = 'https://redis.io';
+</script>
+<script>
+var SITE_ASSETS = 'https://redis.io/wp-content/themes/wpx/assets';
+</script>
+<script>
+var SITE_THEME = 'https://redis.io/wp-content/themes/wpx';
+</script>
+
+
+            <!-- Link to stylesheet -->
+            <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/layout/single.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+            <!-- Fallback -->
+            <noscript>
+                <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/layout/single.css?ver=1713796202" media="all">
+            </noscript>
+                            <!-- Link to stylesheet -->
+                    <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/image.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+                    <!-- Fallback -->
+                    <noscript>
+                        <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/image.css?ver=1713796202" media="all">
+                    </noscript>
+                                <!-- Link to stylesheet -->
+                    <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/buttons.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+                    <!-- Fallback -->
+                    <noscript>
+                        <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/buttons.css?ver=1713796202" media="all">
+                    </noscript>
+                                <!-- Link to stylesheet -->
+                    <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/group.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+                    <!-- Fallback -->
+                    <noscript>
+                        <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/group.css?ver=1713796202" media="all">
+                    </noscript>
+                                <!-- Link to stylesheet -->
+                    <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/paragraph.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+                    <!-- Fallback -->
+                    <noscript>
+                        <link rel="stylesheet" href="https://redis.io/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/paragraph.css?ver=1713796202" media="all">
+                    </noscript>
+                        <!-- Link to stylesheet -->
+            <link rel="stylesheet" href="/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/marketo-form.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+            <!-- Fallback -->
+            <noscript>
+                <link rel="stylesheet" href="/wp-content/themes/wpx/assets/dist/css/globals/refresh/components/blocks/marketo-form.css?ver=1713796202" media="all">
+            </noscript>
+                <!-- Link to stylesheet -->
+        <link rel="stylesheet" href="/wp-content/themes/wpx/assets/dist/css/globals/refresh/footer/footer.css?ver=1713796202" media="print" onload="this.media='all'; this.onload=null;">
+        <!-- Fallback -->
+        <noscript>
+            <link rel="stylesheet" href="/wp-content/themes/wpx/assets/dist/css/globals/refresh/footer/footer.css?ver=1713796202" media="all">
+        </noscript>
+                <!-- Link to stylesheet -->
+        <link rel="stylesheet" href="/wp-content/themes/redislabs-glide/assets/dist/css/footer.min.css?ver=1713796205" media="print" onload="this.media='all'; this.onload=null;">
+        <!-- Fallback -->
+        <noscript>
+            <link rel="stylesheet" href="/wp-content/themes/redislabs-glide/assets/dist/css/footer.min.css?ver=1713796205" media="all">
+        </noscript>
+        <style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-core-buttons-layout-1.wp-container-core-buttons-layout-1{justify-content:center;}.wp-container-core-buttons-layout-2.wp-container-core-buttons-layout-2{flex-wrap:nowrap;justify-content:center;}
+</style>
+<script type="text/javascript" id="wpx-js-js-extra">
+/* <![CDATA[ */
+var redisJS = {"ajaxUrl":"https:\/\/redis.io\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://redis.io/wp-content/themes/wpx/assets/dist/js/app.min.js" id="wpx-js-js"></script>
+<script type="text/javascript" defer='defer' src="https://redis.io/wp-content/themes/redislabs-glide/assets/dist/js/bundle.min.js?ver=1713796202" id="child-theme-scripts-js"></script>
+<script type="text/javascript" src="https://redis.io/wp-content/themes/wpx/assets/dist/js/front-ui.min.js?ver=1713883927" id="redis-front-ui-js"></script>
+<script type="text/javascript" id="redis-front-ui-js-after">
+/* <![CDATA[ */
+const redisAjaxURL = "https://redis.io/wp-admin/admin-ajax.php"; const redisNonce = "609b32a4d7"; const redisPostid = "435";
+/* ]]> */
+</script>
+<script type="text/javascript" src="//lp.redis.com/js/forms2/js/forms2.min.js" id="marketo-js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-1fedf62d6f1beddfa04","applicationID":"650495667","transactionName":"MlFUN0IDCBEEVRZZWgsbdwBECwkMSkQHVFwWGV8NQwsBChE=","queueTime":0,"applicationTime":264,"atts":"HhZXQQoZGx8=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1528710269" async></script></body>
+
+</html>
