@@ -15,3 +15,6 @@ ser-api/serenv
 fer-api/wanderer-ai.json
 ser-api/wanderer-ai.json
 ser-api/wandererai.json
+
+fer-api/haarcascade_frontalface_default.xml
+fer-api/index.html
