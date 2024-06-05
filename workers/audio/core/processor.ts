@@ -1,9 +1,10 @@
 import { logger } from '../config/logger';
-import { api } from '../config/api';
+import { serApi, ferApi } from '../config/api';
+import exp from 'constants';
 
 export const processAudioData = async (sessionId:string, userId:string) => {
     try {
-        const res = await api.post('/predict/ser', { 'session_id': sessionId, 'user_id': userId }, {
+        const res = await serApi.post('/predictions/ser', { 'sessionId': sessionId, 'userId': userId }, {
             headers: {
                 'Content-Type': 'application/json',
                 'x-api-key': 'wanderer1234@WERTYYY5666FF'
@@ -12,5 +13,20 @@ export const processAudioData = async (sessionId:string, userId:string) => {
         logger.log({ level: 'info', message: `Processed audio data: ${res.data.message}` });
     } catch (error) {
         logger.log({ level: 'error', message: `Error processing audio data: ${error}` });
+    }
+}
+
+
+export const processVideoData = async (sessionId:string, userId:string) => {
+    try {
+        const res = await ferApi.post('/predictions/fer', { 'sessionId': sessionId, 'userId': userId }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': 'wanderer1234@WERTYYY5666FF'
+            }
+        });
+        logger.log({ level: 'info', message: `Processed video data: ${res.data.message}` });
+    } catch (error) {
+        logger.log({ level: 'error', message: `Error processing video data: ${error}` });
     }
 }

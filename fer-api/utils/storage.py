@@ -16,7 +16,7 @@ def save_predictions(session_id, user_id, predictions):
         timestamp = datetime.now()
 
         for prediction in predictions:
-            doc_ref = session_ref.collection('ser-emotions').document()
+            doc_ref = session_ref.collection('fer-emotions').document()
 
             doc_data = {
                 'confidence': prediction['confidence'],
@@ -39,7 +39,7 @@ def save_predictions(session_id, user_id, predictions):
 def load_images(session_id):
     bucket = storage.bucket()
     images = []
-    blobs = bucket.list_blobs(prefix=session_id + '/')
+    blobs = bucket.list_blobs(prefix=session_id + '/frame/')
     for blob in blobs:
         if blob.name.endswith('.jpg'):
             

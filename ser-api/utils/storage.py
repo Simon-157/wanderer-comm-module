@@ -10,7 +10,7 @@ def download_audio_files(session_id):
     if not os.path.exists(audio_files_dir):
         os.makedirs(audio_files_dir)
 
-    blobs = bucket.list_blobs(prefix=session_id + '/')
+    blobs = bucket.list_blobs(prefix=session_id + '/audio/')
     for blob in blobs:
         if blob.name.endswith('.wav') and blob.content_type == 'audio/wav': 
             blob.download_to_filename(os.path.join(audio_files_dir, os.path.basename(blob.name)))
@@ -35,7 +35,7 @@ def save_predictions(session_id, user_id, predictions):
         db = firestore.client()
     except Exception as e:
         print("Error connecting to Firestore:", e)
-        return False
+        return False, e
     try:
         session_ref = db.collection('users').document(user_id).collection('sessions').document(session_id)
         batch = db.batch()
@@ -59,7 +59,7 @@ def save_predictions(session_id, user_id, predictions):
 
     except Exception as e:
         print("Error saving predictions:", e)
-        return False
+        return False, e
 
-    return True
+    return True, None
    

@@ -68,7 +68,7 @@ def predict_emotion(img):
         print("Error making predictions:", e)
         return None
 
-@app.route('/predict/fer', methods=['POST'])
+@app.route('/predictions/fer', methods=['POST'])
 def predict():
     if request.method == 'POST':
         try:

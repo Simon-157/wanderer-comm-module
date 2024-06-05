@@ -28,8 +28,11 @@ CORS(app, origins="*")
 
 def predict_emotion(audio_file, n_mfcc=30):
     try:
-        y, sr = librosa.load(audio_file, sr=None, mono=True, offset=1.0, duration=5.0, dtype=np.float64)
+        y, sr = librosa.load(audio_file, mono=True, sr=None, offset=0.5, duration=2.5, dtype=np.float64, res_type='kaiser_fast')
     except Exception as e:
+        error_type = e.__class__.__name__
+        error_message = str(e)
+        print(f"An error occurred: {error_type}: {error_message}")
         return None, str(e)
     if sr != 44100:
         y = resample(y, int(len(y) * 44100 / sr))
@@ -54,15 +57,16 @@ def predict_emotion(audio_file, n_mfcc=30):
 
         return confidence, emotion
     except Exception as e:
+        print("Error making predictions:", e)
         return None, str(e)
 
-@app.before_request
-def verify_api_key():
-    api_key = request.headers.get('x-api-key')
-    if not api_key or api_key != 'wanderer1234@WERTYYY5666FF':
-        return jsonify({'error': 'Invalid API key.'}), 401
+# @app.before_request
+# def verify_api_key():
+#     api_key = request.headers.get('x-api-key')
+#     if not api_key or api_key != 'wanderer1234@WERTYYY5666FF':
+#         return jsonify({'error': 'Invalid API key.'}), 401
 
-@app.route('/predict/ser', methods=['POST'])
+@app.route('/predictions/ser', methods=['POST'])
 def predict():
     if request.method != 'POST':
         return jsonify({'error': 'Invalid request method.'}), 400
@@ -78,14 +82,19 @@ def predict():
             if filename.endswith('.wav'):
                 audio_file = os.path.join(audio_files_dir, filename)
                 confidence, emotion = predict_emotion(audio_file)
+                print(emotion)
                 if confidence is not None:
                     prediction_results.append({'filename': filename, 'confidence': str(confidence), 'emotion': emotion})
+                # else:
+                #     return jsonify({'error': 'Error making predictions.', 'msg': emotion}), 500
 
         if not prediction_results:
             return jsonify({'message': 'success', 'status': 'not ready'}), 200
 
-        if not store.save_predictions(session_id, user_id, prediction_results):
-            return jsonify({'error': 'Error saving predictions'}), 500
+        res = store.save_predictions(session_id, user_id, prediction_results)
+        if not res[0]:
+            return jsonify({'error': 'Error saving predictions, ', "msg": str(res[1])}), 500
+
 
         for filename in os.listdir(audio_files_dir):
             os.remove(os.path.join(audio_files_dir, filename))

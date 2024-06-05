@@ -1,8 +1,8 @@
 import { logger } from "./config/logger";
-import { consumeAudioMessages, init } from "./core/consumer";
+import { consumeAudioMessages, consumeVideoMessages, init } from "./core/consumer";
 
 
-async function startAudioWorker() {
+const startAudioWorker = async ()=> {
     try {
         await init();
         logger.info('Audio worker started');
@@ -12,4 +12,15 @@ async function startAudioWorker() {
     }
 }
 
+const startVideoWorker = async () => {
+    try {
+        await init();
+        logger.info('Video worker started');
+        await consumeVideoMessages();
+    } catch (error) {
+        logger.error('Error starting video worker:', error);
+    }
+}
+
 startAudioWorker();
+startVideoWorker()
