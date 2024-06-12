@@ -99,7 +99,7 @@ def predict():
             print('not processed images or none images:', bad)
 
             # save predictions
-            res = store.save_predictions(session_id, user_id, predictions)
+            res = store.save_predictions(session_id, int(user_id), predictions)
 
             if not res:
                 return jsonify({'error': 'Error saving predictions'}), 500

@@ -10,7 +10,7 @@ def save_predictions(session_id, user_id, predictions):
         return False
 
     try:
-        session_ref = db.collection('users').document(user_id).collection('sessions').document(session_id)
+        session_ref = db.collection('users').document(str(user_id)).collection('sessions').document(session_id)
         batch = db.batch()
 
         timestamp = datetime.now()

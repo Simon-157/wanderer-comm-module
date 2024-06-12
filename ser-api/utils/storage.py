@@ -31,13 +31,14 @@ def zip_audio_files(directory):
 
 
 def save_predictions(session_id, user_id, predictions):
+    print(user_id, session_id)
     try:
         db = firestore.client()
     except Exception as e:
         print("Error connecting to Firestore:", e)
         return False, e
     try:
-        session_ref = db.collection('users').document(user_id).collection('sessions').document(session_id)
+        session_ref = db.collection('users').document(str(user_id)).collection('sessions').document(session_id)
         batch = db.batch()
 
         timestamp = datetime.now()

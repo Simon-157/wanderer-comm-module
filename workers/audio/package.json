@@ -6,7 +6,13 @@
   "scripts": {
     "start": "ts-node index.ts",
     "dev": "nodemon index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "pm2:start": "pm2 start index.ts --name audio --interpreter ts-node",
+    "pm2:stop": "pm2 stop audio",
+    "pm2:restart": "pm2 restart audio",
+    "pm2:delete": "pm2 delete audio",
+    "pm2:save": "pm2 save",
+    "pm2:startup": "pm2 startup && pm2 save"
   },
   "dependencies": {
     "amqplib": "^0.10.4",

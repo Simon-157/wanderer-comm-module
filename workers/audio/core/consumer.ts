@@ -1,5 +1,5 @@
 import { ConsumeMessage } from 'amqplib';
-import { processAudioData } from './processor';
+import { processAudioData, processVideoData } from './processor';
 import { logger } from '../config/logger';
 import { connect, getChannel } from '../config/rabit';
 
@@ -31,7 +31,7 @@ export const consumeAudioMessages = async (): Promise<void> => {
                 const data: AudioMessage = JSON.parse(msg.content.toString());
                 logger.info('Received audio message:', data);
                 try {
-                    await processAudioData(data.sessionId, data.userId);
+                    await processAudioData(data.sessionId, data.userId, process.env.NODE_ENV === "development" ? process.env.WEBHOOK_API_URL : process.env.PROD_WEBHOOK_API_URL);
                     channel.ack(msg);
                 } catch (error) {
                     logger.error('Error processing audio message:', error);
@@ -47,7 +47,6 @@ export const consumeAudioMessages = async (): Promise<void> => {
     }
 }
 
-
 export const consumeVideoMessages = async (): Promise<void> => {
     try {
         const channel = await getChannel();
@@ -56,7 +55,8 @@ export const consumeVideoMessages = async (): Promise<void> => {
                 const data: AudioMessage = JSON.parse(msg.content.toString());
                 logger.info('Received video message:', data);
                 try {
-                    await processAudioData(data.sessionId, data.userId);
+                    
+                    await processVideoData(data.sessionId, data.userId, process.env.NODE_ENV === "development" ? process.env.WEBHOOK_API_URL : process.env.PROD_WEBHOOK_API_URL);
                     channel.ack(msg);
                 } catch (error) {
                     logger.error('Error processing video message:', error);
@@ -70,5 +70,4 @@ export const consumeVideoMessages = async (): Promise<void> => {
         logger.error('Error consuming video messages:', error);
         throw error;
     }
-
-}
+};

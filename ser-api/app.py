@@ -76,7 +76,7 @@ def predict():
         session_id = data.get('sessionId')
         user_id = data.get('userId')
         audio_files_dir = store.download_audio_files(session_id)
-
+        print(user_id, session_id)
         prediction_results = []
         for filename in os.listdir(audio_files_dir):
             if filename.endswith('.wav'):
@@ -101,6 +101,7 @@ def predict():
         return jsonify({'message': 'success', 'status': 'ready'}), 200
 
     except Exception as e:
+        print(str(e))
         return jsonify({'error': str(e)}), 500
 
 @app.route('/zip', methods=['POST'])

@@ -1,0 +1,13 @@
+flask
+tensorflow
+opencv-python
+numpy
+flask_socketio
+firebase-admin
+flask_cors
+
+librosa
+keras
+keras-self-attention
+scipy
+werkzeug

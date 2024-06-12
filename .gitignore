@@ -10,11 +10,13 @@ websocket/package-lock.json
 # ignore python venv
 fer-api/ferenv
 ser-api/serenv
-
+ml_endpoints/mlenv
 # ignore service account key
 fer-api/wanderer-ai.json
 ser-api/wanderer-ai.json
 ser-api/wandererai.json
+ml_endpoints/wanderer-ai.json
 
 fer-api/haarcascade_frontalface_default.xml
+ml_endpoints/haarcascade_frontalface_default.xml
 fer-api/index.html
